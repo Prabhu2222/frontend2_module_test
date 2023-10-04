@@ -1,0 +1,16 @@
+.section2{
+    /* background-color: green; */
+     margin:10px 0px;
+}
+.hero-div{
+    width:85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.hero-div img{
+    width:100%;
+   
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="stylesFolder/header.css">
+    <link rel="stylesheet" href="stylesFolder/hero.css">
+    <link rel="stylesheet" href="stylesFolder/searcDiv.css">
+    <link rel="stylesheet" href="stylesFolder/recipeType.css">
+    <link rel="stylesheet" href="stylesFolder/footer.css">
+    <link rel="stylesheet" href="stylesFolder/foodCardSection.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            /* box-sizing: border-box; */
+        }
+        .section1,.section2,.section3,.section4,.section5,.section6{
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:rgba(239, 230, 230, 0.38)
+        }
+       
+        .media-query{
+
+            display: flex;
+            flex-direction: column;
+            gap:30px;
+            padding-left:25px;
+
+            position:fixed;
+            background-color: aqua;
+            left:0;
+            top:55px;;
+            bottom:0;
+            width:148px;
+
+            transition: all .5s;
+            z-index:200;
+
+            display:none;
+
+        }
+        .media-query span:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+
+        }
+        .left-header input{
+            display: none;
+        }
+      
+      
+    
+    </style>
+</head>
+<body>
+    <section class="section1">
+        <div class="header">
+            <div class="left-header">
+                <span class="material-symbols-outlined">close</span>
+                <label id="menu-label" class="material-symbols-outlined">menu</label>
+                <input type="checkbox" for="menu-label">
+                <img src="images/brand-logo.svg" alt="brand-logo">
+            </div>
+            <div class="right-header">
+                <span>Home</span>
+                <span>Explore</span>
+                <span>Help</span> 
+                <img src="images/profile-pic-logo.svg" alt=""> 
+            </div>
+            <div class="media-query">
+                <span>Home</span>
+                <span>Explore</span>
+                <span>Help</span> 
+            </div>
+        
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="hero-div">
+            <img src="images/hero-section-svg.svg" alt="hero-poster">
+        </div>
+     
+    </section>
+
+
+    <section class="section3">
+        <div class="input-div">
+            <h3>Search For Recipes</h3>
+            <div class="search-div">
+                <input type="text"  id="search-input" placeholder="Search for recipes...">
+                <button id="search-button"><i class="fa-solid fa-magnifying-glass" style="color: #f4f5f5;"></i></button>
+            </div>
+           
+        </div>
+    </section>
+
+
+    <section class="section4">
+        <div class="recipe-types">
+           
+            <button id="all-recipe-btn">All Recipes<i class="fa-solid fa-caret-down fa-rotate-270" style="color: #f6f7f9;"></i></button>
+            <button id="veg-recipe-btn">Veg Recipes <i class="fa-solid fa-caret-down fa-rotate-270" style="color: #f6f7f9;"></i></button>
+            <button id="non-veg-recipe-btn">Non-Veg Recipes<i class="fa-solid fa-caret-down fa-rotate-270" style="color: #f6f7f9;"></i></button>
+          
+        </div>
+    </section>
+
+    <section class="section5">
+        <div class="wrapper">
+            <div class="filter">
+                <h2>Filter</h2>
+                <h3>Ratings</h3>
+                <div class="rating-margin">
+                    <input type="radio" id="radio1" name="ratings" value="4-and-above">
+                    <label for="radio1">4 and Above</label>
+                </div>
+                <div class="rating-margin">
+                    <input type="radio" id="radio2" name="ratings" value="4-below">
+                    <label for="radio2">Below 4</label>
+                </div>
+            </div>
+            <div class="food-card-holder">
+
+                <!-- //create sample card
+                //"https://source.unsplash.com/random?veggies", -->
+                <!-- <div class="food-card">
+                        <img src="https://source.unsplash.com/random?veggies", alt="">
+                    <p class="food-card-type">
+                        Veg
+                    </p>
+                    <div class="food-card-name">
+                        <p>Russian Salad</p>
+                        <p><i class="fa-regular fa-star fa-sm"></i>Rating</p>
+                    </div>
+                    <div class="food-card-time">
+                        <p>40 min</p>
+                        <button><i class="fa-regular fa-heart fa-sm"></i></button>
+                    </div>
+                </div> -->
+
+               
+                
+                
+              
+             
+              
+                
+               
+               
+                
+                
+                
+                
+            </div>
+
+        </div>
+       
+    </section>
+
+
+    <section class="section6">
+        <div class="footer">
+
+      <div class="footer-top">
+
+        <div class="footer-top-left">
+            <img src="images/brand-logo.svg" alt="brand-logo">
+            <p>Cookpal is a recipe website with a wide variety of delicious recipes, easy-to-use search function. Join our community and let's cook together!</p>
+        </div>
+
+        <div class="footer-top-middle">
+            <div class="footer-top-middle-left">
+                <h4>Company</h4>
+                <p>Explore</p>
+                <p>Team</p>
+                <p>About us</p>
+                <p>Activity</p>
+            </div>
+            <div class="footer-top-middle-right">
+                <h4>Resources</h4>
+                <p>Blog</p>
+                <p>Use Cases</p>
+                <p>Testimonials</p>
+                <p>insights</p>
+            </div>
+        </div>
+
+        <div class="footer-top-right">
+            <img src="images/brand-logo.svg" alt="brand-logo">
+            <p>Ut risus mattis interdum faucibus facilisi. Facilisi purus accumsan aliquam.</p>
+            <div class="footer-input">
+                <input type="email" placeholder="Your Email">
+                <button>Subscribe</button>
+            </div>
+          
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+       <span> <i class="fa-brands fa-instagram" style="color: #fff;"></i></span>
+       <span> <i class="fa-brands fa-twitter" style="color: #fff;"></i></span>
+       <span> <i class="fa-brands fa-linkedin-in" style="color: #fff;"></i></span>
+       <span><i class="fa-brands fa-facebook-f " style="color: #fff;"></i></span>
+      </div>
+      
+    
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

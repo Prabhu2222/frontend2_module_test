@@ -1,0 +1,114 @@
+.wrapper{
+    width:85%;
+    display: flex;
+    gap:20px;
+    /* border:2px solid green; */
+    height: fit-content;
+
+
+}
+.section5{
+    margin:20px 0;
+    height: fit-content;
+}
+
+.filter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:20px;
+    padding:10px;
+
+
+    /* border:1px solid black; */
+    white-space: nowrap;
+
+    
+}
+.rating-margin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+.food-card-holder{
+    /* flex:1; */
+    flex-wrap:wrap;
+    gap:15px;
+     
+    padding:10px;
+    display: flex;
+    justify-content: flex;
+
+    /* border:1px solid blue; */
+}
+
+.food-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    font-size:13px;
+  
+    gap:5px;
+
+    height:230px;
+    padding:5px;
+    border-radius: 5px;
+
+    box-shadow: 0px 0px 5px grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.food-card img{
+    width:170px;
+    height:150px;
+    object-fit: fill;
+     border-radius: 10px;;
+        
+}
+.food-card-type{
+    font-size: 10px;
+}
+.food-card-name{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.food-card-time{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.food-card-time button{
+   padding:2px;
+   border:none; 
+   box-shadow: 0px 0px 5px grey;
+}
+.hide{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+   .wrapper{
+    display: flex;
+    flex-direction: column;
+   }
+   .filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;;
+   
+
+   }
+   .filter h2{
+    display: none;
+   }
+  
+}
