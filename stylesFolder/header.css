@@ -1,3 +1,12 @@
+.section1{
+           
+    position:fixed;
+    top:0;
+    background-color:white;
+    z-index: 200px;
+   
+  }
+
 .header{
     width:85%;
 
@@ -8,6 +17,8 @@
     display: flex;
     justify-content: space-between;
     align-items:center;
+
+    transition: all .5s;
 
     /* border:1px solid black; */
 }
@@ -31,9 +42,15 @@
 .left-header span:nth-child(1){
     display: none;
 }
-.left-header span:nth-child(2){
+.left-header label{
     display: none;
 }
+.right-header span:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
 .right-header img{
     width:42px;
     height:42px;
@@ -44,15 +61,42 @@
 .right-header span{
     margin-inline:5px;
 }
+/* ////////////////////////////////////////////////////////// */
+.media-query{
+
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    padding-left:42px;
+    padding-top:20px;
+
+    position:fixed;
+    background-color: white;
+    left:0px;
+    top:52px;;
+    bottom:0;
+    width:160px;
+
+    transition: all 1s;
+    z-index:200px;
+
+
+}
+.header .media-query span:hover{
+    cursor: pointer;
+    transform: scale(1.09);
+
+}
+.left-header input{
+    display: none;
+}
 
 @media screen and (max-width:768px){
 .right-header span{
     display: none;
 }
-/* .left-header span:nth-child(1){
-    display: block;
-} */
-.left-header span:nth-child(2){
+
+.left-header label{
     display: block;
 }
 .right-header img{

@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+    
+    /* box-sizing: border-box; */
+}
+body{
+    transition: all .5s;;
+}
+.section1,.section2,.section3,.section4,.section5,.section6{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(239, 230, 230, 0.38)
+}

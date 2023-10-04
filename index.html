@@ -6,66 +6,21 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="stylesFolder/general.css">
     <link rel="stylesheet" href="stylesFolder/header.css">
     <link rel="stylesheet" href="stylesFolder/hero.css">
     <link rel="stylesheet" href="stylesFolder/searcDiv.css">
     <link rel="stylesheet" href="stylesFolder/recipeType.css">
     <link rel="stylesheet" href="stylesFolder/footer.css">
     <link rel="stylesheet" href="stylesFolder/foodCardSection.css">
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            /* box-sizing: border-box; */
-        }
-        .section1,.section2,.section3,.section4,.section5,.section6{
-            width:100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color:rgba(239, 230, 230, 0.38)
-        }
-       
-        .media-query{
-
-            display: flex;
-            flex-direction: column;
-            gap:30px;
-            padding-left:25px;
-
-            position:fixed;
-            background-color: aqua;
-            left:0;
-            top:55px;;
-            bottom:0;
-            width:148px;
-
-            transition: all .5s;
-            z-index:200;
-
-            display:none;
-
-        }
-        .media-query span:hover{
-            cursor: pointer;
-            transform: scale(1.1);
-
-        }
-        .left-header input{
-            display: none;
-        }
-      
-      
-    
-    </style>
+ 
 </head>
 <body>
     <section class="section1">
         <div class="header">
             <div class="left-header">
-                <span class="material-symbols-outlined">close</span>
-                <label id="menu-label" class="material-symbols-outlined">menu</label>
-                <input type="checkbox" for="menu-label">
+                <label for="menu-label" id="menuLabel"><i class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" id="menu-label">
                 <img src="images/brand-logo.svg" alt="brand-logo">
             </div>
             <div class="right-header">
@@ -74,12 +29,14 @@
                 <span>Help</span> 
                 <img src="images/profile-pic-logo.svg" alt=""> 
             </div>
+
             <div class="media-query">
                 <span>Home</span>
                 <span>Explore</span>
                 <span>Help</span> 
             </div>
-        
+            
+           
         </div>
     </section>
 
@@ -106,9 +63,15 @@
     <section class="section4">
         <div class="recipe-types">
            
-            <button id="all-recipe-btn">All Recipes<i class="fa-solid fa-caret-down fa-rotate-270" style="color: #f6f7f9;"></i></button>
-            <button id="veg-recipe-btn">Veg Recipes <i class="fa-solid fa-caret-down fa-rotate-270" style="color: #f6f7f9;"></i></button>
-            <button id="non-veg-recipe-btn">Non-Veg Recipes<i class="fa-solid fa-caret-down fa-rotate-270" style="color: #f6f7f9;"></i></button>
+            <button id="all-recipe-btn">All Recipes<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.2697 13L8.90723 7.63749L10.4391 6.10565L17.3334 13L10.4391 19.8943L8.90723 18.3625L14.2697 13Z" fill="white"/>
+                </svg></button>
+            <button id="veg-recipe-btn">Veg Recipes<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.2697 13L8.90723 7.63749L10.4391 6.10565L17.3334 13L10.4391 19.8943L8.90723 18.3625L14.2697 13Z" fill="white"/>
+                </svg> </button>
+            <button id="non-veg-recipe-btn">Non-Veg Recipes<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.2697 13L8.90723 7.63749L10.4391 6.10565L17.3334 13L10.4391 19.8943L8.90723 18.3625L14.2697 13Z" fill="white"/>
+                </svg></button>
           
         </div>
     </section>

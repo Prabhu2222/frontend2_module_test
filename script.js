@@ -173,7 +173,8 @@ function createCard(imageSrc,foodType,foodName,rating,prepTime){
     let para4=document.createElement("p");
     para4.innerText=prepTime;
     let btn=document.createElement("button");
-    btn.innerHTML=`<i class="fa-regular fa-heart fa-sm"></i>`
+    btn.addEventListener('click',like);
+    btn.innerHTML=`<i class="fa-solid fa-heart fa-sm" style="color:grey;"></i>`
     foodCardTimeDiv.appendChild(para4);
     foodCardTimeDiv.appendChild(btn);
 
@@ -183,6 +184,28 @@ function createCard(imageSrc,foodType,foodName,rating,prepTime){
     console.log("card created")
 
     return foodCardDiv;
+
+
+}
+function like(event){
+    let likeBtn=event.target.tagName=="I"?event.target.parentNode:event.target;
+    let parentCard=likeBtn.parentNode.parentNode;
+    let foodName=parentCard.children[2].children[0].innerText;
+    totalFoodsArr.forEach((foodObj)=>{
+        if(foodObj.name==foodName){
+            if(foodObj.isLiked){
+              foodObj.isLiked=false;
+              likeBtn.children[0].style.color="grey" 
+            }else{
+                foodObj.isLiked=true;
+                likeBtn.children[0].style.color="red"
+            }
+        }
+
+    })
+
+
+  
 
 
 }
@@ -351,5 +374,21 @@ function sortByRatingBelow(rating){
      
     }
 }
+
+let menuLabel=document.getElementById("menuLabel");
+let mediaQueryDiv=document.querySelector(".media-query")
+menuLabel.addEventListener('click',(event)=>{
+    let label=event.target.tagName=="I"?event.target.parentNode:event.target;
+    console.log(label)
+    let inputCheckBox=document.getElementById("menu-label")
+    if(inputCheckBox.checked){
+        mediaQueryDiv.style.left="0px";
+        document.body.style.background="grey";
+        document.body.style.bl="-100";
+    }else{
+        mediaQueryDiv.style.left="-200px"
+        document.body.style.background="";
+    }
+})
 
 

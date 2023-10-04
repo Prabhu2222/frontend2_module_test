@@ -88,7 +88,19 @@
    padding:2px;
    border:none; 
    box-shadow: 0px 0px 5px grey;
+   width:fit-content;
+   height: fit-content;
+   transition: all .5s;
 }
+.food-card-time button:hover,.food-card-time button i:hover{
+    cursor:pointer;
+
+}
+.food-card-time button:hover{
+    box-shadow: 0px 0px 10px grey;
+    transform: scale(1.2);
+}
+
 .hide{
     display: none;
 }
@@ -109,6 +121,12 @@
    }
    .filter h2{
     display: none;
+   }
+   .food-card-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
    }
   
 }

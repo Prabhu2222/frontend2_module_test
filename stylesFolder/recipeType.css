@@ -12,6 +12,8 @@
 
     overflow-x: auto;
 
+    z-index: -100px;
+
     /* border:1px solid black; */
     
  
@@ -28,15 +30,18 @@
     justify-content: space-between;
     align-items: center;
     gap:20px;
-    background-color: yellow;
+   
 
     transition:all .5s;
     cursor: pointer;
+
+    box-shadow:10px 0px 10px solid black;
 
     
 }
 .recipe-types button:hover{
 transform: scale(1.05);
+
 }
 .recipe-types button:active{
     opacity:.4;

@@ -37,6 +37,12 @@
     width:50px;
     background-color: rgba(80, 158, 47, 1);   
     border-radius: 3px;
+    transition: all .5s;
+
+}
+.search-div button:hover{
+    transform: scale(1.09);
+    cursor:pointer;
 }
 .search-div button i{
     margin-top: 3px;
